@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <style>
+        body {
+    background-size: cover;
+    background-color: rgba(169, 169, 169,1);
+}
+#wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-login {
+    max-width: 400px;
+    background: rgba(235, 232, 232, 0.8);
+    padding: 12px 12px;
+    flex-grow: 1;
+    padding: 50px 50px 60px;
+    text-align: center;
+}
+
+.form-group {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.form-input {
+    background: transparent;
+    padding: 8px 8px;
+    font-size: 18px;
+
+}
+
+.form-submit {
+    width: 10rem;
+    text-transform: uppercase;
+}
+    </style>
+</head>
+<script src="../public/js/jquery-3.6.4.min.js"></script>
+<body>
+    <div id="wrapper">
+        <form action="" id="form-login" method="post">
+            <div class="form-group">
+                <input type="text" name="mssv" class="form-input" placeholder="Nhập mã số sinh viên">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-input" placeholder="Nhập mật khẩu">
+            </div>
+            <input type="submit" value="Đăng nhập" class="form-submit" onclick="login">
+        </form>
+        <div class="message-notification"></div>
+    </div>
+</body>
+</html>

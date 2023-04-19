@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch học</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Tahoma !important;
+        }
+        html{
+            background: url(https://demoda.vn/wp-content/uploads/2022/02/background-trang-1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        li {
+            list-style: none;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 50px;
+            height: 70px;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(153, 161, 168);
+        }
+
+        .logo {
+            flex: 1;
+        }
+
+        .search-bar {
+            flex: 3;
+        }
+
+        .search-bar button {
+            position: relative;
+            right: 23px;
+        }
+        .menu-top {
+            flex: 4;
+        }
+
+        .menu-top ul {
+            display: flex;
+        }
+
+        .menu-top ul li {
+            padding: 0 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .box-df {
+            background-color: #fff;
+            min-height: 20px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px !important;
+        }
+        .portlet {
+            margin-top: 0;
+            margin-bottom: 25px;
+            padding: 0;
+        }
+        .portlet>.portlet-title {
+            border-bottom: 1px solid #eee;
+            padding: 0;
+            margin-bottom: 10px;
+            min-height: 41px;
+        }
+        .portlet>.portlet-title>.caption {
+            display: inline-block;
+            font-size: 18px;
+            line-height: 18px;
+            padding: 10px 0;
+        }
+        .btn-action {
+            background-color: #1da1f2;
+            color: #fff;
+            border-radius: 3px !important;
+            padding: 4px 10px;
+            font-size: 13px;
+            line-height: 1.5;
+            display: inline-block;
+            padding: 6px 0;
+        }
+        .btn-title {
+            font-weight: 700!important;
+        }
+        .table-responsive {
+            min-height: .01%;
+            overflow-x: auto;
+        }
+        .fl-table tbody tr td:first-child {
+            background: #ffffce;
+            vertical-align: middle;
+        }
+        .fl-table .content.color-lichhoc {
+            background-color: #e7ecf0;
+            border: 1px solid #c9d0db;
+            text-align: left;
+            box-sizing: border-box;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container"></div>
+            <div class="logo"></div>
+            <div class="search-bar">
+               <form action="">
+                <input type="text" placeholder="Tìm kiếm...">
+                <button type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+               </form>
+            </div>
+            <div class="menu-top">
+                <ul>
+                    <li><a href="/trang-chu">Trang Chủ</a></li>
+                    <li><a href="/lich-hoc">Lịch học</a></li>
+                    <li><a href="/ket-qua">Kết quả</a></li>
+                    <li><a href="/hoc-phi">Học phí</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="box-df">
+            <div class="portlet">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <span class="btn-title">Lịch học, lịch thi theo tuần</span>
+                    </div>
+                    <div class="actions">
+                        <a href="" class="btn-action">Hiện tại</a>
+                        <a href="" class="btn-action">In lịch</a>
+                        <a href="" class="btn-action">Trở về</a>
+                        <a href="" class="btn-action">Tiếp</a>
+                    </div>
+                </div>
+                <div class="viewlichtheotuan">
+                    <div class="table-responsive">
+                        <table class="f1-table">
+                            <thead>
+                                <tr role="row">
+                                    <th>Ca học</th>
+                                    <th><span>Thứ 2</span></th>
+                                    <th><span>Thứ 3</span></th>
+                                    <th><span>Thứ 4</span></th>
+                                    <th><span>Thứ 5</span></th>
+                                    <th><span>Thứ 6</span></th>
+                                    <th><span>Thứ 7</span></th>
+                                    <th><span>Chủ nhật</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr role="row">
+                                    <td lang="lichtheotuan-buoisang"><b>Sáng</b></td>
+                                    <td>
+                                        <div class="content color-lichhoc">
+                                            <p>KM20B</p>
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr role="row">
+                                    <td lang="lichtheotuan-buoichieu"></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

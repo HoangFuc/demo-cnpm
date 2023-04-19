@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1147679ae7.js" crossorigin="anonymous"></script>
+    <title>Kết quả học tập</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Tahoma !important;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        li {
+            list-style: none;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 50px;
+            height: 70px;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(153, 161, 168);
+        }
+
+        .logo {
+            flex: 1;
+        }
+
+        .search-bar {
+            flex: 3;
+        }
+
+        .search-bar button {
+            position: relative;
+            right: 23px;
+        }
+        .menu-top {
+            flex: 4;
+        }
+
+        .menu-top ul {
+            display: flex;
+        }
+
+        .menu-top ul li {
+            padding: 0 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        html{
+        background: url(https://demoda.vn/wp-content/uploads/2022/02/background-trang-1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin-top: 10%;
+        margin-left: 50px;
+        width: 30%;
+        padding: 15px 60px;       
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container"></div>
+            <div class="logo"></div>
+            <div class="search-bar">
+               <form action="">
+                <input type="text" placeholder="Tìm kiếm...">
+                <button type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+               </form>
+            </div>
+            <div class="menu-top">
+                <ul>
+                    <li><a href="/trang-chu">Trang Chủ</a></li>
+                    <li><a href="/lich-hoc">Lịch học</a></li>
+                    <li><a href="/ket-qua">Kết quả</a></li>
+                    <li><a href="/hoc-phi">Học phí</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <table>
+        <thead>
+                <tr class="ketqua">
+                    <td> STT </td>
+                    <td> Mã học phần </td>
+                    <td> Tên học phần </td>
+                    <td> Điểm quá trình </td>
+                    <td> Điểm thi </td>
+                    <td> Điểm tổng </td>
+                    <td> Điểm hệ 4 </td>
+                    <td> Điểm chữ </td>   
+                </tr>                 
+        </thead>  
+        <tbody>
+                <% for(let i=0; i<dataPoint.length; i++) {  %>
+                    <tr>
+                        <td><%= 1+i %></td>
+                        <td><%= dataPoint[i].maMH %></td>
+                        <td><%= dataPoint[i].tenMH %></td>
+                        <td><%= dataPoint[i].diemquatrinh %></td>
+                        <td><%= dataPoint[i].diemthi %></td>
+                        <td><%= dataPoint[i].diemtong %></td>
+                        <td><%= dataPoint[i].diemheso4 %></td>
+                        <td><%= dataPoint[i].diemchu %></td>
+                    </tr>
+                <% } %>
+        </tbody>
+    </table>
+</body>
+</html>
