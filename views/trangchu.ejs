@@ -23,14 +23,10 @@
         display: flex;
         justify-content: space-between;
         padding: 12px 50px;
-        height: 70px;
+        height: 90px;
         align-items: center;
         justify-content: center;
         background-color: rgb(153, 161, 168);
-    }
-
-    .logo {
-        flex: 1;
     }
 
     .search-bar {
@@ -42,7 +38,7 @@
         right: 23px;
     }
     .menu-top {
-        flex: 4;
+        flex: 2;
     }
 
     .menu-top ul {
@@ -51,12 +47,11 @@
 
     .menu-top ul li {
         padding: 0 12px;
-        font-size: 12px;
+        font-size: 18px;
         font-weight: bold;
     }
     header img{
         border-radius: 50px;
-        height: auto;
         display: block;
         margin-left: 10%;
         margin-right: auto;
@@ -67,18 +62,17 @@
         text-align: center;
         padding: 20px 0;
         color: dimgrey;
-        font-size: 25px;
+        font-size: 30px;
         text-transform: uppercase;
     }
   
     section .middle-box ul li{
         border-collapse: collapse;
-        border: 1px solid black;
         width: 40%;
         display: flex;
         justify-content: left;
-        margin: 0px 260px; 
-        margin-top: 15px;
+        margin: 50px 400px; 
+        margin-top: 10px;
     }
     html{
         background: url(https://demoda.vn/wp-content/uploads/2022/02/background-trang-1.jpg);
@@ -86,25 +80,41 @@
         background-size: cover;
     }
     .box-pic img {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 10px;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 40px;
         display: flex;
     }
     .menu-top ul li a {
         color: #333;
         position: relative;
     }
-    .middle-box {
-        width: 900px
+ 
+    .circle {
+        background: #456BD9;
+        border: 180px solid #e7eff6;
+        border-radius: 50%;
+        box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+        height: 5em;
+        width: 5em;
+        margin-left: 1250px; 
+        display: flex;    
     }
+     
+    .anh{
+        max-width: 70px;
+        height: 70px;
+        margin-top: 8px;      
+    }
+    .middle-box {
+        display: flex;
+    }
+  
     </style>
 </head>
-<script src="../public/js/jquery-3.6.4.min.js"></script>
 <body>
     <header class="header">
         <div class="container"></div>
-            <div class="logo"></div>
             <div class="search-bar">
                <form action="">
                 <input type="text" placeholder="Tìm kiếm...">
@@ -118,30 +128,30 @@
                     <li><a href="/trang-chu">Trang Chủ</a></li>
                     <li><a href="/lich-hoc">Lịch học</a></li>
                     <li><a href="/ket-qua">Kết quả</a></li>
-                    <li><a href="/hoc-phi">Học phí</a></li>
                 </ul>
             </div>
-            <div class="user-account dropdown"></div>
-        </div>
-     
+            <div class="logo">
+                <img src="../public/img/logo9.png" alt="#"  class="anh">
+            </div>
     </header>
     <section>
             <div class="middle-box">
-                <h1>Thông tin sinh viên</h1>
-                <ul>
-                    <li> MSSV: <%= dataUser.mssv %></li> 
-                    <li> Họ và tên: <%= dataUser.hovaten %></li>
-                    <li> Chuyên ngành: <%= dataUser.chuyennganh %></li>
-                    <li> Lớp: <%= dataUser.Malop %></li>
-                    <li> Dân tộc: <%= dataUser.dantoc %></li>
-                    <li> Ngày sinh: </li>
-                </ul> 
-                <div class="box-pic">          
-                    <img src="../public/img/2051150172.png" alt="Ảnh">
+                <div>
+                    <h1>Thông tin sinh viên</h1>
+                    <ul>
+                        <li> MSSV: <%= dataUser.mssv %></li> 
+                        <li> Họ và tên: <%= dataUser.hovaten %></li>
+                        <li> Chuyên ngành: <%= dataUser.chuyennganh %></li>
+                        <li> Lớp: <%= dataUser.Malop %></li>
+                        <li> Dân tộc: <%= dataUser.dantoc %></li>
+                    </ul>                    
+                </div>
+                <div class="box-pic">       
+                    <img src="../public/img/2051150172.jpg" alt="Ảnh">
                 </div> 
             </div>
+            
     </section>
     
-
 </body>  
 </html>

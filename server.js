@@ -44,7 +44,7 @@ app.post('/dang-nhap', (req,res,next) => {
     })
 });
 
-// hiển thị giao diện trang chủ và dùng middleware để lấy dữ liệu từ cookie
+// hiển thị giao diện trang chủ và lấy dữ liệu từ cookie để compare với db
 app.get('/trang-chu', (req,res,next) => {
     UserModel.findOne({
         mssv: req.cookies.mssv
@@ -52,7 +52,8 @@ app.get('/trang-chu', (req,res,next) => {
          .then(dataa => {
              if(dataa) {
                 res.render('../views/trangchu.ejs', {dataUser: dataa})
-             }else {
+             }
+             else {
                  return console.log('loi server')
              }
          })
@@ -62,10 +63,12 @@ app.get('/trang-chu', (req,res,next) => {
          })
 });
 
+// render ra trang lịch học
 app.get('/lich-hoc', (req,res,next) => {
     res.render('../views/lichhoc.ejs')
 })
 
+// hiển thị giao diện kết quả và lấy dữ liệu từ cookie để compare với db
 app.get('/ket-qua',  (req,res,next) => {
     pointModel.find({
         mssv: req.cookies.mssv
