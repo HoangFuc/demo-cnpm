@@ -26,18 +26,12 @@
         }
         header {
             display: flex;
-            justify-content: space-between;
             padding: 12px 50px;
             height: 70px;
             align-items: center;
             justify-content: center;
-            background-color: rgb(153, 161, 168);
+            background-color: rgb(170, 170, 170);
         }
-
-        .logo {
-            flex: 1;
-        }
-
         .search-bar {
             flex: 3;
         }
@@ -47,7 +41,7 @@
             right: 23px;
         }
         .menu-top {
-            flex: 4;
+            flex: 2;
         }
 
         .menu-top ul {
@@ -56,11 +50,11 @@
 
         .menu-top ul li {
             padding: 0 12px;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: bold;
         }
         .box-df {
-            background-color: #fff;
+            background-color: #ffffff;
             min-height: 20px;
             padding: 10px;
             margin-bottom: 15px;
@@ -69,10 +63,10 @@
         .portlet {
             margin-top: 0;
             margin-bottom: 25px;
-            padding: 0;
+            padding: 0;   
         }
         .portlet>.portlet-title {
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #333;
             padding: 0;
             margin-bottom: 10px;
             min-height: 41px;
@@ -83,15 +77,16 @@
             line-height: 18px;
             padding: 10px 0;
         }
+        
         .btn-action {
             background-color: #1da1f2;
             color: #fff;
-            border-radius: 3px !important;
+            border-radius: 5px !important;
             padding: 4px 10px;
-            font-size: 13px;
-            line-height: 1.5;
+            font-size: 19px;
+            line-height: 1,5;
             display: inline-block;
-            padding: 6px 0;
+            padding: 10px 10px;
         }
         .btn-title {
             font-weight: 700!important;
@@ -100,7 +95,7 @@
             min-height: .01%;
             overflow-x: auto;
         }
-        .fl-table tbody tr td:first-child {
+        fl-table tbody tr td:first-child {
             background: #ffffce;
             vertical-align: middle;
         }
@@ -111,6 +106,41 @@
             box-sizing: border-box;
             display: block;
         }
+        .fl-table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin-top: 10%;
+            margin-left: 35%;
+            width: 30%;
+            padding: 15px 70px;
+        }
+        table tr td{
+            border: 2px solid black;
+            border-collapse: collapse;
+            margin-top: 20%;
+            margin-right: 20%;
+            width: 10%;
+            padding: 10px 50px;
+            text-align: center;
+            font-family: "Times New Roman";
+            font-weight: 800;
+        }
+        .anh{
+        max-width: 70px;
+        height: 70px;
+        margin-top: 8px;      
+        }
+        .content{
+            background-color: #e7ecf0;
+            border: 1px solid #c9d0db;
+            text-align: left;
+            color: #003763;
+            padding: 5px;
+            font-size: 13px;
+            border-radius: 4px !important;
+            position: relative;
+        }
+ 
     </style>
 </head>
 <body>
@@ -130,9 +160,9 @@
                     <li><a href="/trang-chu">Trang Chủ</a></li>
                     <li><a href="/lich-hoc">Lịch học</a></li>
                     <li><a href="/ket-qua">Kết quả</a></li>
-                    <li><a href="/hoc-phi">Học phí</a></li>
                 </ul>
             </div>
+            <img alt="#" src="anh/image10" class="anh"/>
         </div>
     </header>
     <section>
@@ -149,52 +179,61 @@
                         <a href="" class="btn-action">Tiếp</a>
                     </div>
                 </div>
-                <div class="viewlichtheotuan">
-                    <div class="table-responsive">
-                        <table class="f1-table">
-                            <thead>
-                                <tr role="row">
-                                    <th>Ca học</th>
-                                    <th><span>Thứ 2</span></th>
-                                    <th><span>Thứ 3</span></th>
-                                    <th><span>Thứ 4</span></th>
-                                    <th><span>Thứ 5</span></th>
-                                    <th><span>Thứ 6</span></th>
-                                    <th><span>Thứ 7</span></th>
-                                    <th><span>Chủ nhật</span></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr role="row">
-                                    <td lang="lichtheotuan-buoisang"><b>Sáng</b></td>
-                                    <td>
-                                        <div class="content color-lichhoc">
-                                            <p>KM20B</p>
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr role="row">
-                                    <td lang="lichtheotuan-buoichieu"></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
             </div>
         </div>
+        <table>
+            <thead>
+                <div class="lichhoc">                   
+                        <tr style="background-color: aqua">
+                            <td rowspan="2"> Ca học </td>
+                            <td> Thứ 2 </td>
+                            <td> Thứ 3 </td>
+                            <td> Thứ 4 </td>
+                            <td> Thứ 5 </td>
+                            <td> Thứ 6 </td>
+                            <td> Thứ 7 </td>
+                            <td> Chủ nhật </td>
+                        </tr>
+                        <tr style="background-color: aqua">
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>8</td>
+                        </tr>                       
+                        <tr>
+                            <td style="background-color: yellow"> Sáng </td>
+                            <td>
+                                <div class="content">
+                                    <b>ANninhMnag</b>
+                                    <p>TIet:2</p>
+                                    <p>Ca1</p>
+                                    <p>aaa</p>
+                                    <p>asdasda</p>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>                     
+                        </tr>
+                        <tr>
+                            <td style="background-color: yellow"> Chiều </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                </div>
+            </thead>
+        </table>
     </section>
 </body>
 </html>
